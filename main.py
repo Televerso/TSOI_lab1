@@ -118,15 +118,15 @@ kernel1 =  np.array([[7,32,16],
                     [0,-5,1.5]])
 kernel2 =  np.array([[1,0,0,0,0,0,1],
                      [1,0,0,0,0,0,1],
-                     [1,0,0,0,0,0,1]])
+                     [1,0,0,0,0,0,1]])/6
 kernel3 =  np.array([[0.33,0,0],
                      [0,0.33,0],
                      [0,0,0.33]])
 
-image_conv = convolution_by_map(image_gray, kernel3)
+image_conv = convolution_by_map(image_gray, kernel2)
 show_image(image_conv)
 
-image_conv = convolution_fft(image_gray, kernel3)
+image_conv = convolution_fft(image_gray, kernel2)
 show_image(image_conv)
 
 
